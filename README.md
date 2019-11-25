@@ -8,16 +8,13 @@ The completed app looks like the animated gif below. When you type in text for a
 
 ## Setup
 
-A recent nodejs is required. First fork the repo at github, by going to the url:
+A recent nodejs is required.
 
-- https://github.com/postal-io/react-todo-list-tester
+First fork this repo into your own github account. Once you've made a fork of the repo, clone the fork to your local machine.
 
-Once you've made a fork of the repo, clone it to your local machine. When you are done and all the tests pass, push to your repo and let us know.
+When you are done with the coding challenge, go ahead and push it back up to github. You can do multiple pushes if you'd like. The goal is to complete this in under 1 hour, but if you need more time that is fine as we will review it tomorrow.
 
 ```
-# clone the repo
-git clone https://github.com/YOUR-GITHUB-REPO/react-todo-list-tester.git
-cd react-todo-list-tester
 
 # install the dependencies
 npm install
