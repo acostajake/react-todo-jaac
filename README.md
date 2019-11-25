@@ -12,7 +12,7 @@ A recent nodejs is required.
 
 First fork this repo into your own github account. Once you've made a fork of the repo, clone the fork to your local machine.
 
-When you are done with the coding challenge, go ahead and push it back up to github. You can do multiple pushes if you'd like. The goal is to complete this in under 1 hour, but if you need more time that is fine as we will review it tomorrow.
+When you are done with the coding challenge, go ahead and push it back up to github and submit a PR. You can do multiple pushes if you'd like. The goal is to complete this in under 1 hour, but if you need more time that is fine as we will review it tomorrow.
 
 ```
 
