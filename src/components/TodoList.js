@@ -11,19 +11,25 @@ export const TodoList = () => {
   // below is an example of using useState
   // https://reactjs.org/docs/hooks-state.html
 
-  // const [text, setText] = useState('')
-  // const [items, setItems] = useState([])
+  const [text, setText] = useState('')
+  const [items, setItems] = useState([])
 
   const handleInput = e => {
-    // handle onChange of the input field
+    const { name, value } = e.target;
+    setText({ [name]: value })
   }
 
   const handleSubmit = e => {
-    // handle onSubmit of the form
+    e.preventDefault()
+    if (text) {
+      setItems([...items, text])
+      setText({ text: '' })
+    }
   }
 
-  const deleteItem = key => {
-    // handle deleting when a task is clicked
+  const deleteItem = item => {
+    const oneLessTask = items.filter(todo => items.indexOf(todo) !== items.indexOf(item))
+    setItems([ ...oneLessTask ])
   }
 
   return (
@@ -31,9 +37,10 @@ export const TodoList = () => {
       <div className="header">
         <form onSubmit={handleSubmit}>
           <input
+            name="text"
             placeholder="enter task"
-            onChange={handleInput}
-            value={text}
+            onChange={e => handleInput(e)}
+            value={text.text}
             className="new-task"
             data-testid="new-task"
             autoFocus
