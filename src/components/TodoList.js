@@ -14,15 +14,15 @@ export const TodoList = () => {
   const [text, setText] = useState('')
   const [items, setItems] = useState([])
 
-  const handleInput = e => {
+  function handleInput(e) {
     const { name, value } = e.target;
     setText({ [name]: value })
   }
 
   const handleSubmit = e => {
     e.preventDefault()
-    if (text) {
-      setItems([...items, text])
+    if (text.text.length) {
+      setItems([ ...items, text ])
       setText({ text: '' })
     }
   }
@@ -40,12 +40,12 @@ export const TodoList = () => {
             name="text"
             placeholder="enter task"
             onChange={e => handleInput(e)}
-            value={text.text}
+            value={text.text || ''}
             className="new-task"
             data-testid="new-task"
             autoFocus
           />
-          <button type="submit">add</button>
+          <button disabled={!text} type="submit">add</button>
         </form>
       </div>
       <TodoItems items={items} onDelete={deleteItem} />
