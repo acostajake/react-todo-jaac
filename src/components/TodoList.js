@@ -14,7 +14,7 @@ export const TodoList = () => {
   const [text, setText] = useState('')
   const [items, setItems] = useState([])
 
-  function handleInput(e) {
+  const handleInput = e => {
     const { name, value } = e.target;
     setText({ [name]: value })
   }
